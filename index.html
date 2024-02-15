@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headlines - The Lorem Ipsum</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-css-reset/dist/reset.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+
+<body>
+    <div class="black-background">
+        <div id="navbar">
+            <a href="#" id="logo">Cybersäkerhet</a>
+            <div id="navbar-right">
+                <a class="active" href="#">Startsida</a>
+                <a href="#">Anonymitet</a>
+                <a href="#">Wi-fi</a>
+                <a href="#">Phishing</a>
+                <a href="#">Extra</a>
+                <a href="#">Skydd</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script>
+
+
+        const disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
+
+
+        if (!disclaimerAccepted) {
+            // Om disclaimern inte har accepterats, redirect till disclaimer-sidan
+            window.location.href = 'disclaimer.html';
+        }
+
+
+        // Flytta goToCyberSecurityLaw utanför window.onload
+        function goToCyberSecurityLaw() {
+            // Använd en absolut länk
+            window.location.href =
+                "https://www.msb.se/sv/amnesomraden/informationssakerhet-cybersakerhet-och-sakra-kommunikationer/nis-direktivet/lag-forordning-och-foreskrifter/";
+
+
+        }
+
+    </script>
+
+
+
+    <div class="container">
+        <header>
+
+    </div>
+
+    </nav>
+    </header>
+
+
+    <main>
+        <div class="omoss">
+            <h3>Om oss</h3>
+            <h4>Dimitri Vodianoi</h4>
+            <p class="dim">Elev på Pauliskolan.
+                Teknikprogrammet.
+                18 år.
+                utbfilvod@skola.malmo.se
+            </p>
+            <h5>Olivier Zyc</h5>
+            <p class="oli">Elev på Pauliskolan.
+                Teknikprogrammet.
+                18 år.
+                utbkaczyc@skola.malmo.se
+            </p>
+        </div>
+        <div class="textvid1">
+            <h1>Väkommna!</h1>
+            <p class="text1">Välkomna till vårt gymnasiearbete om cybersäkerhet och etisk hacking. Vi är två elever som
+                går
+                teknik och valde dator- och nätverksteknik, samt programmering som vårt ämne för gymnasiearbete. På
+                följande
+                sida kommer det finnas olika tutorials om följande ämnen; phishing, wi-fi, anonymitet, skydd och extra
+                såsom
+                flipper zero. Ämnen valdes utifrån vårt formulär som du kan titta på i samma sida.</p>
+
+            <section id="section05">
+                <a href="#section05"></a>
+                <div class="rum">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dx6kFHb0BsA" frameborder="0"
+                            allowfullscreen></iframe>
+
+                    </div>
+            </section>
+        </div>
+        <div class="textvid2">
+            <h2>Dina första steg | Virtuell Maskin</h2>
+            <p class="text2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi veritatis culpa soluta
+                sit quod perspiciatis, itaque vero porro quo accusamus officia laboriosam omnis laudantium tempore
+                accusantium voluptatum. Dolorum cupiditate amet, aspernatur aperiam quod in iure, blanditiis suscipit,
+                odio omnis molestias? Soluta porro laborum recusandae aliquam maiores enim ea ipsam dignissimos.</p>
+            <div class="video2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fOd16PT1S7A?si=4pWuBRLnKUHlXlzn"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+        </div>
+
+    </main>
+    <footer>
+        <p> Pauliskolan | TE21A | Dimitri Vodianoi & Olivier Zyc</p>
+    </footer>
+    </div>
+
+    <script>
+        $(function () {
+            $('a[href*="#section05"]').on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
+            });
+
+            window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                const navbar = document.getElementById("navbar");
+                const logo = document.getElementById("logo");
+
+                if (window.scrollY > 80) {
+                    navbar.style.padding = "30px 10px";
+                    logo.style.fontSize = "25px";
+                    logo.style.marginRight = "0";
+                    logo.style.marginLeft = "20px";
+                    navbar.classList.add("scrolled");
+                    navbar.style.top = "0"; // Adjust the top property
+                    navbarRightlinks.css("margin-right", "40px");
+                } else {
+                    navbar.style.padding = "80px 10px";
+                    logo.style.fontSize = "67px";
+                    logo.style.marginLeft = "500px";
+                    navbar.classList.remove("scrolled");
+                    navbar.style.top = "200px"; // Adjust the top property back to 150px
+                    navbarRightlinks.css("margin-right", "40px");
+                }
+            }
+        });
+    </script>
+
+
+</body>
+
+
+
+
+
+
+</html>
